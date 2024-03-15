@@ -133,33 +133,33 @@
                 }
             }
         },
-        "ngx-guided-tour": {
-            "root": "projects/ngx-guided-tour",
-            "sourceRoot": "projects/ngx-guided-tour/src",
+        "finiac-ngx-guided-tour": {
+            "root": "projects/finiac-ngx-guided-tour",
+            "sourceRoot": "projects/finiac-ngx-guided-tour/src",
             "projectType": "library",
             "prefix": "lib",
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
                     "options": {
-                        "tsConfig": "projects/ngx-guided-tour/tsconfig.lib.json",
-                        "project": "projects/ngx-guided-tour/ng-package.json"
+                        "tsConfig": "projects/finiac-ngx-guided-tour/tsconfig.lib.json",
+                        "project": "projects/finiac-ngx-guided-tour/ng-package.json"
                     }
                 },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "main": "projects/ngx-guided-tour/src/test.ts",
-                        "tsConfig": "projects/ngx-guided-tour/tsconfig.spec.json",
-                        "karmaConfig": "projects/ngx-guided-tour/karma.conf.js"
+                        "main": "projects/finiac-ngx-guided-tour/src/test.ts",
+                        "tsConfig": "projects/finiac-ngx-guided-tour/tsconfig.spec.json",
+                        "karmaConfig": "projects/finiac-ngx-guided-tour/karma.conf.js"
                     }
                 },
                 "lint": {
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
                         "tsConfig": [
-                            "projects/ngx-guided-tour/tsconfig.lib.json",
-                            "projects/ngx-guided-tour/tsconfig.spec.json"
+                            "projects/finiac-ngx-guided-tour/tsconfig.lib.json",
+                            "projects/finiac-ngx-guided-tour/tsconfig.spec.json"
                         ],
                         "exclude": [
                             "**/node_modules/**"
@@ -169,5 +169,7 @@
             }
         }
     },
-    "defaultProject": "ngx-guided-tour-demo"
+    "cli": {
+      "analytics": false
+    }
 }

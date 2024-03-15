@@ -1,6 +1,6 @@
 {
-  "name": "ngx-guided-tour",
-  "version": "2.0.1",
+  "name": "finiac-ngx-guided-tour",
+  "version": "2.0.2",
   "description": "Guided tour for your Angular applications.",
   "peerDependencies": {
     "@angular/common": ">=13.0.0",
@@ -38,7 +38,7 @@
     "lib": {
       "entryFile": "src/public_api.ts"
     },
-    "dest": "../../dist/ngx-guided-tour"
+    "dest": "../../dist/finiac-ngx-guided-tour"
   },
   "exports": {
     "./scss/guided-tour-base-theme.scss": {

@@ -6,13 +6,15 @@
         "start": "ng serve",
         "build": "ng build",
         "build:all": "ng build && npm run build:lib",
-        "build:lib": "ng-packagr -p projects/ngx-guided-tour/package.json && npm run build:lib:css && npm run build:lib:scss",
-        "build:lib:css": "sass ./projects/ngx-guided-tour/src/lib/guided-tour-base-theme.scss ./dist/ngx-guided-tour/css/guided-tour-base-theme.css && sass ./projects/ngx-guided-tour/src/lib/guided-tour.component.scss ./dist/ngx-guided-tour/css/guided-tour.component.css",
-        "build:lib:scss": "mkdir ./dist/ngx-guided-tour/scss/ && cp ./projects/ngx-guided-tour/src/lib/guided-tour-base-theme.scss ./dist/ngx-guided-tour/scss/guided-tour-base-theme.scss && cp ./projects/ngx-guided-tour/src/lib/guided-tour.component.scss ./dist/ngx-guided-tour/scss/guided-tour.component.scss",
+        "build:lib": "ng-packagr -p projects/finiac-ngx-guided-tour/package.json && npm run build:lib:css && npm run build:lib:scss",
+        "build:lib:css": "sass ./projects/finiac-ngx-guided-tour/src/lib/guided-tour-base-theme.scss ./dist/finiac-ngx-guided-tour/css/guided-tour-base-theme.css && sass ./projects/finiac-ngx-guided-tour/src/lib/guided-tour.component.scss ./dist/finiac-ngx-guided-tour/css/guided-tour.component.css",
+        "build:lib:scss": "mkdir ./dist/finiac-ngx-guided-tour/scss/ && cp ./projects/finiac-ngx-guided-tour/src/lib/guided-tour-base-theme.scss ./dist/finiac-ngx-guided-tour/scss/guided-tour-base-theme.scss && cp ./projects/finiac-ngx-guided-tour/src/lib/guided-tour.component.scss ./dist/finiac-ngx-guided-tour/scss/guided-tour.component.scss",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "publish": "cp README.md dist/ngx-guided-tour/README.md && cd dist/ngx-guided-tour && npm publish"
+        "publish": "cp README.md dist/finiac-ngx-guided-tour/README.md && cd dist/finiac-ngx-guided-tour && npm publish",
+        "fini:build": "ng build finiac-ngx-guided-tour",
+        "fini:publish": "npm run fini:build && npm run publish"
     },
     "private": true,
     "dependencies": {
@@ -27,10 +29,10 @@
         "bootstrap": "5.3.1",
         "core-js": "^3.21.1",
         "rxjs": "^6.6.7",
-        "zone.js": "0.11.5"
+        "zone.js": "0.13.0"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "^13.3.0",
+        "@angular-devkit/build-angular": "^16.0.0",
         "@angular/cli": "^16.0.0",
         "@angular/compiler-cli": "^16.0.0",
         "@angular/language-service": "^16.0.0",
@@ -45,7 +47,7 @@
         "karma-coverage-istanbul-reporter": "2.0.5",
         "karma-jasmine": "~4.0.1",
         "karma-jasmine-html-reporter": "~1.7.0",
-        "ng-packagr": "^13.3.0",
+        "ng-packagr": "^16.0.0",
         "normalize-url": "6.1.0",
         "protractor": "7.0.0",
         "sass": "^1.49.9",
@@ -54,6 +56,6 @@
         "ts-node": "10.7.0",
         "tslib": "^2.3.0",
         "tslint": "5.11.0",
-        "typescript": "^5.4.0"
+        "typescript": "^5.1.0"
     }
 }
